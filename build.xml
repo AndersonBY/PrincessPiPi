@@ -167,11 +167,27 @@
                 <file name="cocos2d/parallax/CCParallaxNode.js"/>
                 <file name="cocos2d/parallax/CCParallaxNodeRenderCmd.js"/>
                 <file name="cocos2d/audio/CCAudio.js"/>
+                <file name="cocos2d/physics/CCPhysicsSprite.js"/>
+                <file name="cocos2d/physics/CCPhysicsDebugNode.js"/>
+                <file name="cocos2d/physics/CCPhysicsDebugNodeCanvasRenderCmd.js"/>
+                <file name="cocos2d/physics/CCPhysicsDebugNodeWebGLRenderCmd.js"/>
+                <file name="cocos2d/physics/CCPhysicsSpriteCanvasRenderCmd.js"/>
+                <file name="cocos2d/physics/CCPhysicsSpriteWebGLRenderCmd.js"/>
+                <file name="external/chipmunk/chipmunk.js"/>
 
             </sources>
             <sources dir="${basedir}">
                 <file name="src/resource.js"/>
                 <file name="src/app.js"/>
+                <file name="src/AnimationLayer.js"/>
+                <file name="src/BackgroundLayer.js"/>
+                <file name="src/PlayScene.js"/>
+                <file name="src/StatusLayer.js"/>
+                <file name="src/globals.js"/>
+                <file name="src/coin.js"/>
+                <file name="src/rock.js"/>
+                <file name="src/GameOverLayer.js"/>
+                <file name="src/SimpleRecognizer.js"/>
                 <file name="main.js"/>
 
             </sources>
