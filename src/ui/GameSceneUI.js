@@ -16,32 +16,32 @@ var GameSceneUI = cc.Layer.extend({
 
         var lifeLabel = new cc.LabelBMFont("LIVES", fnt);
         this.addChild(lifeLabel);
-        lifeLabel.x = 360;
+        lifeLabel.x = 200;
         lifeLabel.y = winSize.height - 25;
 
         this._lifeText = new cc.LabelBMFont("0", fnt, -1, cc.TEXT_ALIGNMENT_LEFT);
         this.addChild(this._lifeText);
-        this._lifeText.x = 360;
+        this._lifeText.x = 200;
         this._lifeText.y = winSize.height - 60;
 
         var distanceLabel = new cc.LabelBMFont("DISTANCE", fnt);
         this.addChild(distanceLabel);
-        distanceLabel.x = 680;
+        distanceLabel.x = 400;
         distanceLabel.y = winSize.height - 25;
 
         this._distanceText = new cc.LabelBMFont("50", fnt, -1, cc.TEXT_ALIGNMENT_LEFT);
         this.addChild(this._distanceText);
-        this._distanceText.x = 680;
+        this._distanceText.x = 400;
         this._distanceText.y = winSize.height - 60;
 
         var scoreLabel = new cc.LabelBMFont("CLOTHES", fnt);
         this.addChild(scoreLabel);
-        scoreLabel.x = 915;
+        scoreLabel.x = 600;
         scoreLabel.y = winSize.height - 25;
 
         this._scoreText = new cc.LabelBMFont("100", fnt, -1, cc.TEXT_ALIGNMENT_LEFT);
         this.addChild(this._scoreText);
-        this._scoreText.x = 915;
+        this._scoreText.x = 600;
         this._scoreText.y = winSize.height - 60;
 
         var pauseButton = new cc.MenuItemImage("#pauseButton.png", "#pauseButton.png", this._pauseResume);

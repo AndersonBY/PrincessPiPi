@@ -22,16 +22,19 @@ var GameOverUI = cc.Layer.extend({
         title.setColor(cc.color(243,231,95));
         title.x = winSize.width/2;
         title.y = winSize.height - 120;
+        title.setScale(2);
 
         this._distanceText = new cc.LabelBMFont("DISTANCE TRAVELLED: 0000000", fnt);
         this.addChild(this._distanceText);
         this._distanceText.x = winSize.width/2;
-        this._distanceText.y = winSize.height - 220;
+        this._distanceText.y = winSize.height - 250;
+        this._distanceText.setScale(1.8);
 
         this._scoreText = new cc.LabelBMFont("CLOTHES COLLECTED: 0000000", fnt);
         this.addChild(this._scoreText);
         this._scoreText.x = winSize.width/2;
-        this._scoreText.y = winSize.height - 270;
+        this._scoreText.y = winSize.height - 400;
+        this._scoreText.setScale(1.8);
 
 
         var replayBtn = new cc.MenuItemImage("#gameOver_playAgainButton.png", "#gameOver_playAgainButton.png", this._replay.bind(this));
@@ -44,8 +47,8 @@ var GameOverUI = cc.Layer.extend({
     },
 
     init:function(){
-        this._distanceText.setString("DISTANCE TRAVELLED: " + parseInt(Game.user.distance));
-        this._scoreText.setString("CLOTHES COLLECTED: " + Game.user.score);
+    	this._distanceText.setString("DISTANCE TRAVELLED:\r\n          " + parseInt(Game.user.distance));
+        this._scoreText.setString("CLOTHES COLLECTED:\r\n          " + Game.user.score);
     },
 
     _replay:function(){

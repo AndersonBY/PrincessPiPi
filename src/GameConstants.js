@@ -54,7 +54,7 @@ var GameConstants = {
     // Hero properties -----------------------------------------
     
     /** Hero's initial spare lives. */
-    HERO_LIVES : 5,
+    HERO_LIVES : 3,
     
     /** Hero's minimum speed. */
     HERO_MIN_SPEED : 250,
