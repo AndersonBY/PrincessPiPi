@@ -31,11 +31,12 @@ var AboutScene = cc.Scene.extend({
         	"It's based on Hungry Hero, cocos2d-js version made by Kenko.\n\n"+
         	"                                                                        Anderson"
 
+        var aboutText = "Test";
         var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 24);
 //        helloLabel.color = cc.color(0,0,0);
 //        helloLabel._setStrokeStyle(cc.color(0,0,255));
         helloLabel.x = winSize.width/2;
-        helloLabel.y = winSize.height/2 + 40;
+        helloLabel.y = winSize.height/2 + 20;
 //        helloLabel.textAlign = cc.TEXT_ALIGNMENT_CENTER;
         layer.addChild(helloLabel);
 
