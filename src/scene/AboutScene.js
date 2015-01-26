@@ -14,6 +14,9 @@ var AboutScene = cc.Scene.extend({
         bgWelcome.x = winSize.width/2;
         bgWelcome.y = winSize.height/2;
         layer.addChild(bgWelcome);
+        
+        cc.log(winSize.width);
+        cc.log(winSize.height);
 
         var aboutText = "This is a story about Princess PiPi.\n"+
         	"Princess PiPi, as we all know, is a very lovely and beautiful girl.\n"+
@@ -37,8 +40,8 @@ var AboutScene = cc.Scene.extend({
         layer.addChild(helloLabel);
 
         var backButton = new cc.MenuItemImage("#about_backButton.png", "#about_backButton.png", this._back);
-        backButton.x = -150;
-        backButton.y = -150;
+        backButton.x = winSize.width/2 - 100;
+        backButton.y = winSize.height/2 - 50;
         var menu = new cc.Menu(backButton);
         layer.addChild(menu);
 
