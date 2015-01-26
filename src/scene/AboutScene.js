@@ -32,7 +32,7 @@ var AboutScene = cc.Scene.extend({
         	"                                                                        Anderson";
 
         var aboutText = "This is a story about Princess PiPi."+
-        	"Princess PiPi, as we all know, is a very lovely and beautiful girl.";
+        	"\nPrincess PiPi, as we all know, is a very lovely and beautiful girl.";
         var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 24);
 //        helloLabel.color = cc.color(0,0,0);
 //        helloLabel._setStrokeStyle(cc.color(0,0,255));
