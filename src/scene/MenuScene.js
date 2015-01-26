@@ -28,7 +28,7 @@ var MenuScene = cc.Scene.extend({
         this._hero.y = 400;
         layer.addChild(this._hero);
 
-        var move = cc.moveTo(2, cc.p(this._hero.width/2 + 100, this._hero.y)).easing(cc.easeOut(2));
+        var move = cc.moveTo(2, cc.p(this._hero.width/2 + 60, this._hero.y)).easing(cc.easeOut(2));
         this._hero.runAction(move);
 
         this._playBtn = new cc.MenuItemImage("#welcome_playButton.png", "#welcome_playButton.png", this._play);

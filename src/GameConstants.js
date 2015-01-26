@@ -57,10 +57,10 @@ var GameConstants = {
     HERO_LIVES : 5,
     
     /** Hero's minimum speed. */
-    HERO_MIN_SPEED : 650,
+    HERO_MIN_SPEED : 250,
     
     /** Hero's maximum speed when had coffee. */
-    HERO_MAX_SPEED : 1400,
+    HERO_MAX_SPEED : 600,
     
     /** Movement speed - game/player/items/obstacles speed. */
     GRAVITY : 10,
@@ -71,7 +71,7 @@ var GameConstants = {
     OBSTACLE_GAP : 1200,
     
     /** Obstacle speed. */
-    OBSTACLE_SPEED : 300,
+    OBSTACLE_SPEED : 500,
 
     GAME_AREA_TOP_BOTTOM : 100
 };

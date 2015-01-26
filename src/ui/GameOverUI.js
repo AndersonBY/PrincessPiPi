@@ -17,7 +17,7 @@ var GameOverUI = cc.Layer.extend({
         this.addChild(bg);
 
         var fnt = "res/fonts/font.fnt";
-        var title = new cc.LabelBMFont("HERO WAS KILLED!", fnt);
+        var title = new cc.LabelBMFont("JOURNEY OVER!", fnt);
         this.addChild(title);
         title.setColor(cc.color(243,231,95));
         title.x = winSize.width/2;
@@ -28,7 +28,7 @@ var GameOverUI = cc.Layer.extend({
         this._distanceText.x = winSize.width/2;
         this._distanceText.y = winSize.height - 220;
 
-        this._scoreText = new cc.LabelBMFont("SCORE: 0000000", fnt);
+        this._scoreText = new cc.LabelBMFont("CLOTHES COLLECTED: 0000000", fnt);
         this.addChild(this._scoreText);
         this._scoreText.x = winSize.width/2;
         this._scoreText.y = winSize.height - 270;
@@ -45,7 +45,7 @@ var GameOverUI = cc.Layer.extend({
 
     init:function(){
         this._distanceText.setString("DISTANCE TRAVELLED: " + parseInt(Game.user.distance));
-        this._scoreText.setString("SCORE: " + Game.user.score);
+        this._scoreText.setString("CLOTHES COLLECTED: " + Game.user.score);
     },
 
     _replay:function(){

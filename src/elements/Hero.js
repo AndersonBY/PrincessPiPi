@@ -11,11 +11,11 @@ var Hero = cc.Sprite.extend({
     ctor:function () {
         this._super("#fly_0001.png");   //设置这个，否则无法获取sprite宽高
         this._animation = new cc.Animation();
-        for (var i = 1; i < 20; i++) {
+        for (var i = 1; i < 7; i++) {
             this._animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame("fly_00" + (i<10?('0'+i):i) + ".png"));
 //            this._animation.addSpriteFrameWithFile("res/graphics/small_images/fly_00" + (i<10?('0'+i):i) + ".png");
         }
-        this._animation.setDelayPerUnit(1/20);
+        this._animation.setDelayPerUnit(1/7);
         var action = cc.animate(this._animation).repeatForever();
         this.runAction(action);
         this._fast = false;

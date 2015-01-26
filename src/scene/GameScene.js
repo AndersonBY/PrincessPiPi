@@ -18,6 +18,8 @@ var GameScene = cc.Scene.extend({
 
     _touchY:0,
     _cameraShake:0,
+    
+    _additionalSpeed:0,
 
 
     ctor:function () {
@@ -232,8 +234,10 @@ var GameScene = cc.Scene.extend({
 
             case GameConstants.GAME_STATE_FLYING:
                 // If drank coffee, fly faster for a while.
+            	this._additionalSpeed = parseInt(Game.user.distance/10) - 10;
+            	cc.log(Game.user.heroSpeed);
                 if (Game.user.coffee > 0)
-                    Game.user.heroSpeed += (GameConstants.HERO_MAX_SPEED - Game.user.heroSpeed) * 0.2;
+                    Game.user.heroSpeed += (GameConstants.HERO_MAX_SPEED + this._additionalSpeed - Game.user.heroSpeed) * 0.2;
                 else
                     this.stopCoffeeEffect();
 
@@ -241,8 +245,11 @@ var GameScene = cc.Scene.extend({
                 if (Game.user.hitObstacle <= 0) {
                     this._hero.y -= (this._hero.y - this._touchY) * 0.1;
 
-                    // If this._hero is flying extremely fast, create a wind effect and show force field around this._hero.
-                    if (Game.user.heroSpeed > GameConstants.HERO_MIN_SPEED + 100) {
+                    Game.user.heroSpeed += (GameConstants.HERO_MIN_SPEED + this._additionalSpeed - Game.user.heroSpeed) * 0.2;
+
+                    // If this._hero is flying extremely fast, 
+                    // create a wind effect and show force field around this._hero.
+                    if (Game.user.heroSpeed > GameConstants.HERO_MIN_SPEED + this._additionalSpeed + 100) {
                         this.showWindEffect();
                         // Animate this._hero faster.
                         this._hero.toggleSpeed(true);
@@ -288,7 +295,7 @@ var GameScene = cc.Scene.extend({
                 // If we have a coffee, reduce the value of the power.
                 if (Game.user.coffee > 0) Game.user.coffee -= elapsed;
 
-                Game.user.heroSpeed -= (Game.user.heroSpeed - GameConstants.HERO_MIN_SPEED) * 0.01;
+                Game.user.heroSpeed -= (Game.user.heroSpeed - GameConstants.HERO_MIN_SPEED - this._additionalSpeed ) * 0.01;
 
                 // Create food items.
                 this._foodManager.update(this._hero, elapsed);

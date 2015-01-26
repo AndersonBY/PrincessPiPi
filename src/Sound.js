@@ -6,7 +6,7 @@ var Sound = {
     _eatEffect:0,
     playMenuBgMusic:function(){
         if(!Sound.silence)
-            cc.audioEngine.playMusic("res/sounds/bgWelcome.mp3", true);
+            cc.audioEngine.playMusic("res/sounds/bgGame.mp3", true);
     },
     playGameBgMusic:function(){
         if(!Sound.silence)

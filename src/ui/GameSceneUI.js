@@ -14,7 +14,7 @@ var GameSceneUI = cc.Layer.extend({
         var fnt = "res/fonts/font.fnt";
         var winSize = cc.director.getWinSize();
 
-        var lifeLabel = new cc.LabelBMFont("L I V E S", fnt);
+        var lifeLabel = new cc.LabelBMFont("LIVES", fnt);
         this.addChild(lifeLabel);
         lifeLabel.x = 360;
         lifeLabel.y = winSize.height - 25;
@@ -24,7 +24,7 @@ var GameSceneUI = cc.Layer.extend({
         this._lifeText.x = 360;
         this._lifeText.y = winSize.height - 60;
 
-        var distanceLabel = new cc.LabelBMFont("D I S T A N C E", fnt);
+        var distanceLabel = new cc.LabelBMFont("DISTANCE", fnt);
         this.addChild(distanceLabel);
         distanceLabel.x = 680;
         distanceLabel.y = winSize.height - 25;
@@ -34,7 +34,7 @@ var GameSceneUI = cc.Layer.extend({
         this._distanceText.x = 680;
         this._distanceText.y = winSize.height - 60;
 
-        var scoreLabel = new cc.LabelBMFont("S C O R E", fnt);
+        var scoreLabel = new cc.LabelBMFont("CLOTHES", fnt);
         this.addChild(scoreLabel);
         scoreLabel.x = 915;
         scoreLabel.y = winSize.height - 25;

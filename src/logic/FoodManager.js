@@ -291,7 +291,7 @@ var FoodManager = cc.Class.extend({
                     if (heroItem_sqDist < 5000) {
                         // If hero eats an item, add up the score.
                         if (item.type <= GameConstants.ITEM_TYPE_5) {
-                            Game.user.score += item.type;
+                            Game.user.score += 1;
                             Sound.playEat();
                         }
                         else if (item.type == GameConstants.ITEM_TYPE_COFFEE) {

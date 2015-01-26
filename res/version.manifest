@@ -1,7 +1,7 @@
 {
-	"packageUrl" : "http://kenkozheng.github.io/cocos/res/",
-	"remoteManifestUrl" : "http://kenkozheng.github.io/cocos/res/project.manifest",
-	"remoteVersionUrl" : "http://kenkozheng.github.io/cocos/res/version.manifest",
+	"packageUrl" : "http://andersonby.github.io/cocos2dxjs/res/",
+	"remoteManifestUrl" : "http://andersonby.github.io/cocos2dxjs/res/project.manifest",
+	"remoteVersionUrl" : "http://andersonby.github.io/cocos2dxjs/res/version.manifest",
 	"version" : "1.0.0",
 	"engineVersion" : "3.0 rc2"
 }

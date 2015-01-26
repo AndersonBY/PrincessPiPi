@@ -15,23 +15,30 @@ var AboutScene = cc.Scene.extend({
         bgWelcome.y = winSize.height/2;
         layer.addChild(bgWelcome);
 
-        var aboutText = "Hungry Hero is a free and open source game built on Adobe Flash using Starling Framework.\n\nhttp://www.hungryherogame.com\n\n" +
-            " And this is a cocos2d-js version modified by Kenko.\n\n" +
-            " The concept is very simple. The hero is pretty much always hungry and you need to feed him with food.\n\n" +
-            " You score when your Hero eats food.There are different obstacles that fly in with a \"Look out!\"\n\n" +
-            " caution before they appear. Avoid them at all costs. You only have 5 lives. Try to score as much as possible and also\n\n" +
-            " try to travel the longest distance.";
-        var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 14);
+        var aboutText = "This is a story about Princess PiPi.\n"+
+        	"Princess PiPi, as we all know, is a very lovely and beautiful girl.\n"+
+        	"She loves new clothes. And she just can't have enough clothes.\n"+
+        	"On her birthday, an angel gives her a pair of wings,\n"+
+        	"and put thousands of clothes in the sky.\n"+
+        	"So now you need to control Princess PiPi to fly and\n"+
+        	"collect as much clothes as possible.\n"+
+        	"But be ware of the other things flying in the sky!\n"+
+        	"Now let's start the journey!\n\n"+
+        	"This is a game I made for my girlfriend DongLi as a birthday Gift.\n"+
+        	"It's based on Hungry Hero, cocos2d-js version made by Kenko.\n\n"+
+        	"                                                                        Anderson"
+
+        var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 24);
 //        helloLabel.color = cc.color(0,0,0);
 //        helloLabel._setStrokeStyle(cc.color(0,0,255));
         helloLabel.x = winSize.width/2;
-        helloLabel.y = winSize.height/2 + 80;
+        helloLabel.y = winSize.height/2 + 40;
 //        helloLabel.textAlign = cc.TEXT_ALIGNMENT_CENTER;
         layer.addChild(helloLabel);
 
         var backButton = new cc.MenuItemImage("#about_backButton.png", "#about_backButton.png", this._back);
-        backButton.x = 150;
-        backButton.y = -70;
+        backButton.x = -150;
+        backButton.y = -150;
         var menu = new cc.Menu(backButton);
         layer.addChild(menu);
 
