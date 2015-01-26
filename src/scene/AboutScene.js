@@ -37,8 +37,8 @@ var AboutScene = cc.Scene.extend({
         layer.addChild(helloLabel);
 
         var backButton = new cc.MenuItemImage("#about_backButton.png", "#about_backButton.png", this._back);
-        backButton.x = winSize.width/2 - 100;
-        backButton.y = winSize.height/2 - 50;
+        backButton.x = - 200;
+        backButton.y = - 200;
         var menu = new cc.Menu(backButton);
         layer.addChild(menu);
 
