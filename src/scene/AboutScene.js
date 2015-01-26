@@ -14,9 +14,6 @@ var AboutScene = cc.Scene.extend({
         bgWelcome.x = winSize.width/2;
         bgWelcome.y = winSize.height/2;
         layer.addChild(bgWelcome);
-        
-        cc.log(winSize.width);
-        cc.log(winSize.height);
 
         var aboutText = "This is a story about Princess PiPi.\r\n"+
         	"Princess PiPi, as we all know, is a very lovely and beautiful girl.\r\n"+
