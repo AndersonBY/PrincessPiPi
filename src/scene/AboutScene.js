@@ -29,9 +29,10 @@ var AboutScene = cc.Scene.extend({
         	"Now let's start the journey!\n\n"+
         	"This is a game I made for my girlfriend DongLi as a birthday Gift.\n"+
         	"It's based on Hungry Hero, cocos2d-js version made by Kenko.\n\n"+
-        	"                                                                        Anderson"
+        	"                                                                        Anderson";
 
-        var aboutText = "Test";
+        var aboutText = "This is a story about Princess PiPi.\n"+
+        	"Princess PiPi, as we all know, is a very lovely and beautiful girl.";
         var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 24);
 //        helloLabel.color = cc.color(0,0,0);
 //        helloLabel._setStrokeStyle(cc.color(0,0,255));
