@@ -18,21 +18,19 @@ var AboutScene = cc.Scene.extend({
         cc.log(winSize.width);
         cc.log(winSize.height);
 
-        var aboutText = "This is a story about Princess PiPi.\n"+
-        	"Princess PiPi, as we all know, is a very lovely and beautiful girl.\n"+
-        	"She loves new clothes. And she just can't have enough clothes.\n"+
-        	"On her birthday, an angel gives her a pair of wings,\n"+
-        	"and put thousands of clothes in the sky.\n"+
-        	"So now you need to control Princess PiPi to fly and\n"+
-        	"collect as much clothes as possible.\n"+
-        	"But be ware of the other things flying in the sky!\n"+
-        	"Now let's start the journey!\n\n"+
-        	"This is a game I made for my girlfriend DongLi as a birthday Gift.\n"+
-        	"It's based on Hungry Hero, cocos2d-js version made by Kenko.\n\n"+
+        var aboutText = "This is a story about Princess PiPi.\r\n"+
+        	"Princess PiPi, as we all know, is a very lovely and beautiful girl.\r\n"+
+        	"She loves new clothes. And she just can't have enough clothes.\r\n"+
+        	"On her birthday, an angel gives her a pair of wings,\r\n"+
+        	"and put thousands of clothes in the sky.\r\n"+
+        	"So now you need to control Princess PiPi to fly and\r\n"+
+        	"collect as much clothes as possible.\r\n"+
+        	"But be ware of the other things flying in the sky!\r\n"+
+        	"Now let's start the journey!\r\n\r\n"+
+        	"This is a game I made for my girlfriend DongLi as a birthday Gift.\r\n"+
+        	"It's based on Hungry Hero, cocos2d-js version made by Kenko.\r\n\r\n"+
         	"                                                                        Anderson";
 
-        var aboutText = "This is a story about Princess PiPi. "+
-        	"\r\nPrincess PiPi, as we all know, is a very lovely and beautiful girl.";
         var helloLabel = cc.LabelTTF.create(aboutText, "Arial", 24);
 //        helloLabel.color = cc.color(0,0,0);
 //        helloLabel._setStrokeStyle(cc.color(0,0,255));
