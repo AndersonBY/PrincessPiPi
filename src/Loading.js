@@ -134,7 +134,15 @@ Loading.preload = function (resources, cb) {
 		_cc.loaderScene.init();
 	}
 	_cc.loaderScene.initWithResources(resources, cb);
-
+	
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?128578ac31fb1e0c7b8f342e84b3107e";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+	
 	cc.director.runScene(_cc.loaderScene);
 	return _cc.loaderScene;
 };
