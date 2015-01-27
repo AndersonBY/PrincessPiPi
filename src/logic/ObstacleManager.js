@@ -36,8 +36,9 @@ var ObstacleManager = cc.Class.extend({
     /**
      * @param hero
      * @param elapsed 秒，见GameScene.update
+     * @param userDistance
      */
-    update: function (hero, elapsed) {
+    update: function (hero, elapsed, userDistance) {
         // Create an obstacle after hero travels some distance (obstacleGap).
         if (this._obstacleGapCount < GameConstants.OBSTACLE_GAP) {
             this._obstacleGapCount += Game.user.heroSpeed * elapsed;
@@ -46,7 +47,7 @@ var ObstacleManager = cc.Class.extend({
             this._obstacleGapCount = 0;
 
             // Create any one of the obstacles.
-            this._createObstacle(Math.ceil(Math.random() * 4), Math.random() * 1000 + 1000);
+            this._createObstacle(Math.ceil(Math.random() * 4), Math.random() * 1000 + 1000, userDistance);
         }
         this._animateObstacles(hero, elapsed);
     },
@@ -55,8 +56,9 @@ var ObstacleManager = cc.Class.extend({
      * Create the obstacle object based on the type indicated and make it appear based on the distance passed.
      * @param type
      * @param distance
+     * @param user distance
      */
-    _createObstacle: function (type, distance) {
+    _createObstacle: function (type, distance, userDistance) {
         var winSize = cc.director.getWinSize();
         var x = winSize.width;
         var y = 0;
@@ -77,7 +79,12 @@ var ObstacleManager = cc.Class.extend({
             position = "middle";
         }
 
-        var obstacle = Obstacle.create(type, true, position, GameConstants.OBSTACLE_SPEED, distance);
+        if (userDistance>2000)
+        	showLookOut = false;
+        else
+        	showLookOut = true;
+
+        var obstacle = Obstacle.create(type, showLookOut, position, GameConstants.OBSTACLE_SPEED, distance);
         obstacle.x = x + obstacle.width/2;
         obstacle.y = y;
         this._obstaclesToAnimate.push(obstacle);

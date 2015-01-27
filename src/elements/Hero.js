@@ -15,7 +15,7 @@ var Hero = cc.Sprite.extend({
             this._animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame("fly_00" + (i<10?('0'+i):i) + ".png"));
 //            this._animation.addSpriteFrameWithFile("res/graphics/small_images/fly_00" + (i<10?('0'+i):i) + ".png");
         }
-        this._animation.setDelayPerUnit(1/7);
+        this._animation.setDelayPerUnit(1/4);
         var action = cc.animate(this._animation).repeatForever();
         this.runAction(action);
         this._fast = false;

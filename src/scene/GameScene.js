@@ -234,7 +234,7 @@ var GameScene = cc.Scene.extend({
 
             case GameConstants.GAME_STATE_FLYING:
                 // If drank coffee, fly faster for a while.
-            	this._additionalSpeed = parseInt(Game.user.distance/10) - 10;
+            	this._additionalSpeed = parseInt(Game.user.distance/5) - 20;
 
                 if (Game.user.coffee > 0)
                     Game.user.heroSpeed += (GameConstants.HERO_MAX_SPEED + this._additionalSpeed - Game.user.heroSpeed) * 0.2;
@@ -300,7 +300,7 @@ var GameScene = cc.Scene.extend({
                 // Create food items.
                 this._foodManager.update(this._hero, elapsed);
                 // Create obstacles.
-                this._obstacleManager.update(this._hero, elapsed);
+                this._obstacleManager.update(this._hero, elapsed, Game.user.distance);
 
 //                // Store the hero's current x and y positions (needed for animations below).
 //                heroX = hero.x;
