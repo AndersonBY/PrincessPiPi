@@ -23,5 +23,51 @@
 <canvas id="gameCanvas" width="800" height="450"></canvas>
 
 <script src="game.min.js"></script>
+<script src="weixin.js"></script>
+<script type="text/javascript">
+    function sharefun(title){
+        window.wxData.desc = title;
+        window.wxFriend.title = title;
+    }
+    function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURIComponent(r[2]);
+    return null;
+};
+var openid = getQueryString("openid");
+
+    window.wxData = {
+        "appId": "",
+        "imgUrl":'res/favicon.ico',
+        "link":'',
+        "desc":"东篱小公主的愉快旅程！",
+        "title":"Princess PiPi"
+    };
+    window.wxFriend = {
+        "appId": "",
+        "imgUrl":'res/favicon.ico',
+        "link":'',
+        "desc":"东篱小公主的愉快旅程！",
+        "title":"Princess PiPi"
+    };
+    WeixinApi.ready(function(Api) {
+        var wxCallbacks = {
+            ready : function() {
+            },
+            cancel : function(resp) {
+            },
+            fail : function(resp) {
+            },
+            confirm : function(resp) {
+            },
+            all : function(resp) {
+            }
+        };
+        Api.shareToFriend(wxFriend, wxCallbacks);
+        Api.shareToTimeline(wxData, wxCallbacks);
+        Api.shareToWeibo(wxData, wxCallbacks);
+    });
+</script>
 </body>
 </html>
