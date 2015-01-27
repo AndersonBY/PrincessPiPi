@@ -11,6 +11,8 @@ var MenuScene = cc.Scene.extend({
         this._super();
         var layer = new cc.Layer();
         this.addChild(layer);
+        
+        cc.log("in MenuScene.js");
 
         var winSize = cc.director.getWinSize();
         var bgWelcome = new cc.Sprite("res/graphics/bgWelcome.jpg");
